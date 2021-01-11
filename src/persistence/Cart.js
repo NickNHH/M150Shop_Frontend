@@ -35,7 +35,7 @@ export function useCart() {
             .catch(error => console.log(error))
     }
     const delAllArticles = (article) => {
-        fetch(SHOPURL + "carts/" + article.id + "/" + cartToken, {
+        fetch(SHOPURL + "carts/" + article.id + "/" + cartToken + "/all", {
             method: "DELETE",
             headers: {"Content-Type": "application/json; charset=utf-8"},
             body: JSON.stringify(article)
